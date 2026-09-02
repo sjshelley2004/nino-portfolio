@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Niño R. Acunin - Executive & Operations Professional</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            900: '#0c4a6e',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #334155;
+            background-color: #f8fafc;
+        }
+        .section-heading {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 2rem;
+        }
+        .section-heading::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: #0ea5e9;
+            border-radius: 2px;
+        }
+        /* Custom scrollbar for a cleaner look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8; 
+        }
+
+        /* Print styles for the Resume Modal */
+        @media print {
+            body > *:not(#resume-modal) {
+                display: none !important;
+            }
+            #resume-modal {
+                display: block !important;
+                position: static !important;
+            }
+            #resume-modal .backdrop {
+                display: none !important;
+            }
+            #resume-modal .modal-container {
+                position: static !important;
+                padding: 0 !important;
+                box-shadow: none !important;
+                width: 100% !important;
+                max-width: none !important;
+            }
+            #resume-modal .modal-header {
+                display: none !important;
+            }
+            #printable-resume {
+                overflow: visible !important;
+                padding: 0 !important;
+                height: auto !important;
+            }
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-brand-100 selection:text-brand-900">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/90 backdrop-blur-md z-50 border-b border-slate-200 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="#" class="text-xl font-bold text-slate-800 tracking-tight">Niño R. Acunin</a>
+                </div>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#about" class="text-sm font-medium text-slate-600 hover:text-brand-600 transition-colors">About</a>
+                    <a href="#strengths" class="text-sm font-medium text-slate-600 hover:text-brand-600 transition-colors">Strengths</a>
+                    <a href="#experience" class="text-sm font-medium text-slate-600 hover:text-brand-600 transition-colors">Experience</a>
+                    <a href="#capabilities" class="text-sm font-medium text-slate-600 hover:text-brand-600 transition-colors">Capabilities</a>
+                    <a href="#contact" class="px-4 py-2 rounded-full bg-brand-600 text-white text-sm font-medium hover:bg-brand-700 transition-colors shadow-sm">Contact</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-slate-900 focus:outline-none p-2">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu (hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full">
+            <div class="px-4 pt-2 pb-6 space-y-1 shadow-lg">
+                <a href="#about" class="block px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-brand-600 rounded-md">About</a>
+                <a href="#strengths" class="block px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-brand-600 rounded-md">Strengths</a>
+                <a href="#experience" class="block px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-brand-600 rounded-md">Experience</a>
+                <a href="#capabilities" class="block px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-brand-600 rounded-md">Capabilities</a>
+                <a href="#contact" class="block px-3 py-3 text-base font-medium text-brand-600 hover:bg-brand-50 rounded-md mt-4">Contact Me</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-[#f8fbff]">
+        <!-- Background decoration -->
+        <div class="absolute top-0 right-0 -z-10 w-full h-full bg-gradient-to-br from-[#f8fbff] to-white"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+                <!-- Text Content -->
+                <div class="order-2 lg:order-1">
+                    <span class="inline-block py-1.5 px-4 rounded-full bg-[#e1f0fa] text-[#0ea5e9] text-xs font-bold tracking-wider uppercase mb-6 shadow-sm border border-[#bae0f5]">
+                        Santa Rosa, Laguna, Philippines
+                    </span>
+                    <h1 class="text-5xl sm:text-6xl lg:text-[4.5rem] font-extrabold text-[#0f172a] leading-[1.1] mb-6 tracking-tight">
+                        Executive & <br>
+                        <span class="text-[#0ea5e9]">Operations</span> <br>
+                        Professional
+                    </h1>
+                    <p class="text-lg sm:text-xl text-slate-600 mb-8 max-w-lg leading-relaxed">
+                        10+ years of experience in administration, executive support, HR, operations, documentation, customer service, and virtual assistance.
+                    </p>
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 mb-8 border-l-4 border-l-[#0ea5e9] italic text-slate-700">
+                        "I'm the kind of professional who takes ownership, keeps details organized, anticipates what needs to be done, and makes it easier for leaders and teams to move forward."
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#contact" class="inline-flex justify-center items-center px-8 py-3.5 border border-transparent text-base font-semibold rounded-xl text-white bg-sky-500 hover:bg-sky-600 shadow-md hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200">
+                            Get in Touch
+                        </a>
+                        <button onclick="toggleResumeModal()" class="inline-flex justify-center items-center px-8 py-3.5 border border-slate-200 hover:border-slate-300 text-base font-semibold rounded-xl text-slate-700 bg-white hover:bg-slate-50 shadow-sm hover:shadow-md transition-all duration-200 cursor-pointer">
+                            <i class="fa-solid fa-file-lines mr-2 text-sky-500"></i> View Resume
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Profile Image -->
+                <div class="order-1 lg:order-2 flex justify-center lg:justify-end relative px-4 lg:px-0">
+                     <!-- Background slanted shape -->
+                     <div class="absolute inset-0 bg-[#e0f2fe] rounded-[2.5rem] transform rotate-3 scale-105 origin-center -z-10 transition-transform duration-500 hover:rotate-6 shadow-inner w-[90%] mx-auto lg:mx-0 lg:ml-auto"></div>
+                     
+                    <!-- Clean image integration -->
+                    <div class="relative w-full max-w-md aspect-square rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white mx-auto lg:mx-0 lg:mr-4 bg-slate-200">
+                        <img src="nino-acunin_4.jpeg" alt="Niño R. Acunin" class="w-full h-full object-cover object-top">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Profile Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-slate-900 section-heading mx-auto">Professional Profile</h2>
+            <p class="mt-6 text-lg text-slate-600 leading-relaxed">
+                Highly organized and results-driven Administrative and Operations Professional with more than 10 years of experience supporting executives, managing administrative workflows, coordinating operations, maintaining records, preparing reports, and working with clients and internal teams. Experienced in fast-paced environments where accuracy, discretion, follow-through, and clear communication are essential.
+            </p>
+        </div>
+    </section>
+
+    <!-- Core Strengths -->
+    <section id="strengths" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-900 section-heading mx-auto">Core Strengths</h2>
+                <p class="mt-4 text-slate-600 max-w-2xl mx-auto">Focused areas of expertise driving operational efficiency and executive success.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Strength Item -->
+                <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-100 hover:shadow-md transition-shadow duration-300 flex items-start">
+                    <div class="flex-shrink-0 h-10 w-10 rounded-lg bg-brand-100 flex items-center justify-center text-brand-600 mr-4">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-slate-800 mb-1">Executive & Admin Support</h3>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-100 hover:shadow-md transition-shadow duration-300 flex items-start">
+                    <div class="flex-shrink-0 h-10 w-10 rounded-lg bg-brand-100 flex items-center justify-center text-brand-600 mr-4">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-slate-800 mb-1">Operations Coordination</h3>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-100 hover:shadow-md transition-shadow duration-300 flex items-start">
+                    <div class="flex-shrink-0 h-10 w-10 rounded-lg bg-brand-100 flex items-center justify-center text-brand-600 mr-4">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-slate-800 mb-1">HR Administration</h3>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-100 hover:shadow-md transition-shadow duration-300 flex items-start">
+                    <div class="flex-shrink-0 h-10 w-10 rounded-lg bg-brand-100 flex items-center justify-center text-brand-600 mr-4">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-slate-800 mb-1">Calendar & Meeting</h3>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-100 hover:shadow-md transition-shadow duration-300 flex items-start">
+                    <div class="flex-shrink-0 h-10 w-10 rounded-lg bg-brand-100 flex items-center justify-center text-brand-600 mr-4">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-slate-800 mb-1">Reports & Documentation</h3>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-100 hover:shadow-md transition-shadow duration-300 flex items-start">
+                    <div class="flex-shrink-0 h-10 w-10 rounded-lg bg-brand-100 flex items-center justify-center text-brand-600 mr-4">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-slate-800 mb-1">Procurement & Purchasing</h3>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-100 hover:shadow-md transition-shadow duration-300 flex items-start">
+                    <div class="flex-shrink-0 h-10 w-10 rounded-lg bg-brand-100 flex items-center justify-center text-brand-600 mr-4">
+                        <i class="fas fa-folder-open"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-slate-800 mb-1">Employee & Digital Records</h3>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-100 hover:shadow-md transition-shadow duration-300 flex items-start">
+                    <div class="flex-shrink-0 h-10 w-10 rounded-lg bg-brand-100 flex items-center justify-center text-brand-600 mr-4">
+                        <i class="fas fa-boxes"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-slate-800 mb-1">Inventory Monitoring</h3>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-100 hover:shadow-md transition-shadow duration-300 flex items-start">
+                    <div class="flex-shrink-0 h-10 w-10 rounded-lg bg-brand-100 flex items-center justify-center text-brand-600 mr-4">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-slate-800 mb-1">Client Communication</h3>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-100 hover:shadow-md transition-shadow duration-300 flex items-start">
+                    <div class="flex-shrink-0 h-10 w-10 rounded-lg bg-brand-100 flex items-center justify-center text-brand-600 mr-4">
+                        <i class="fab fa-microsoft"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-slate-800 mb-1">MS Office & Google Workspace</h3>
+                    </div>
+                </div>
+                 <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-100 hover:shadow-md transition-shadow duration-300 flex items-start">
+                    <div class="flex-shrink-0 h-10 w-10 rounded-lg bg-brand-100 flex items-center justify-center text-brand-600 mr-4">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-slate-800 mb-1">Process Organization</h3>
+                    </div>
+                </div>
+                 <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-100 hover:shadow-md transition-shadow duration-300 flex items-start">
+                    <div class="flex-shrink-0 h-10 w-10 rounded-lg bg-brand-100 flex items-center justify-center text-brand-600 mr-4">
+                        <i class="fas fa-laptop-house"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-slate-800 mb-1">Remote / Virtual Support</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Section -->
+    <section class="py-20 bg-brand-900 text-white relative overflow-hidden">
+        <!-- Abstract Shapes -->
+        <div class="absolute top-0 right-0 -mt-20 -mr-20 w-80 h-80 bg-white opacity-5 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 -mb-20 -ml-20 w-80 h-80 bg-brand-500 opacity-20 rounded-full blur-3xl"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <h2 class="text-3xl font-bold mb-12 text-center">What I Bring to the Table</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20">
+                    <div class="text-brand-300 text-2xl mb-4"><i class="fas fa-check-circle"></i></div>
+                    <h3 class="text-xl font-semibold mb-2">Ownership</h3>
+                    <p class="text-slate-300">I take responsibility for tasks from instruction through completion and follow up without needing repeated reminders.</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20">
+                    <div class="text-brand-300 text-2xl mb-4"><i class="fas fa-search"></i></div>
+                    <h3 class="text-xl font-semibold mb-2">Attention to Detail</h3>
+                    <p class="text-slate-300">I verify information, maintain organized records, and review work before submission.</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20">
+                    <div class="text-brand-300 text-2xl mb-4"><i class="fas fa-lightbulb"></i></div>
+                    <h3 class="text-xl font-semibold mb-2">Operational Mindset</h3>
+                    <p class="text-slate-300">I look for practical ways to simplify recurring work, improve organization, and reduce unnecessary manual effort.</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20">
+                    <div class="text-brand-300 text-2xl mb-4"><i class="fas fa-sync-alt"></i></div>
+                    <h3 class="text-xl font-semibold mb-2">Adaptability</h3>
+                    <p class="text-slate-300">My background spans administration, HR, operations, customer service, sales, marketing, and virtual support, giving me a broad understanding of how teams work together.</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20 md:col-span-2 lg:w-1/2 lg:mx-auto">
+                    <div class="text-brand-300 text-2xl mb-4"><i class="fas fa-comments"></i></div>
+                    <h3 class="text-xl font-semibold mb-2">Professional Communication</h3>
+                    <p class="text-slate-300">I am comfortable communicating with executives, employees, clients, suppliers, and international contacts.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Timeline -->
+    <section id="experience" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-slate-900 section-heading mb-16">Career Experience</h2>
+            
+            <div class="relative border-l-2 border-brand-200 ml-3 md:ml-0 md:pl-0 space-y-12">
+                
+                <!-- Experience 1 -->
+                <div class="relative pl-8 md:pl-0">
+                    <div class="md:hidden absolute w-4 h-4 bg-brand-500 rounded-full -left-[9px] top-1 border-4 border-white shadow"></div>
+                    <div class="md:grid md:grid-cols-5 md:gap-8 items-start">
+                        <div class="md:col-span-1 md:text-right mb-2 md:mb-0 hidden md:block relative">
+                            <span class="text-sm font-bold text-brand-600 block">Dec 2023 - Present</span>
+                            <!-- Desktop Timeline Dot -->
+                            <div class="absolute w-4 h-4 bg-brand-500 rounded-full -right-[25px] top-1 border-4 border-white shadow z-10"></div>
+                        </div>
+                        <div class="md:col-span-4 bg-slate-50 p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-all relative">
+                            <span class="text-xs font-bold text-brand-600 mb-1 block md:hidden">Dec 2023 - Present</span>
+                            <h3 class="text-xl font-bold text-slate-800">HR & Administrative Operations Manager</h3>
+                            <h4 class="text-md font-medium text-slate-600 mb-4">Takumi Safety Philippines Inc.</h4>
+                            <ul class="list-disc list-outside ml-5 text-slate-600 space-y-2">
+                                <li>Manage daily administrative and operational activities and support business requirements across functions.</li>
+                                <li>Prepare reports, memoranda, correspondence, and company documentation with attention to accuracy and confidentiality.</li>
+                                <li>Maintain employee records and HR files while monitoring office and operational inventory.</li>
+                                <li>Coordinate procurement and purchasing and support accounting and logistics documentation.</li>
+                                <li>Organize meetings and executive schedules and help ensure compliance with company and government requirements.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience 2 -->
+                <div class="relative pl-8 md:pl-0">
+                    <div class="md:hidden absolute w-4 h-4 bg-slate-300 rounded-full -left-[9px] top-1 border-4 border-white shadow"></div>
+                    <div class="md:grid md:grid-cols-5 md:gap-8 items-start">
+                        <div class="md:col-span-1 md:text-right mb-2 md:mb-0 hidden md:block relative">
+                            <span class="text-sm font-semibold text-slate-500 block">Jan 2021 - Dec 2023</span>
+                            <div class="absolute w-4 h-4 bg-slate-300 rounded-full -right-[25px] top-1 border-4 border-white shadow z-10"></div>
+                        </div>
+                        <div class="md:col-span-4 bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-all">
+                             <span class="text-xs font-semibold text-slate-500 mb-1 block md:hidden">Jan 2021 - Dec 2023</span>
+                            <h3 class="text-xl font-bold text-slate-800">General Virtual Administrative Assistant</h3>
+                            <h4 class="text-md font-medium text-slate-600 mb-4">Bluebaby Logistics LLC</h4>
+                            <ul class="list-disc list-outside ml-5 text-slate-600 space-y-2">
+                                <li>Provided remote administrative support through email and phone.</li>
+                                <li>Prepared reports and maintained organized digital records.</li>
+                                <li>Managed calendars and coordinated client communications across time zones.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- Experience 3 -->
+                 <div class="relative pl-8 md:pl-0">
+                    <div class="md:hidden absolute w-4 h-4 bg-slate-300 rounded-full -left-[9px] top-1 border-4 border-white shadow"></div>
+                    <div class="md:grid md:grid-cols-5 md:gap-8 items-start">
+                        <div class="md:col-span-1 md:text-right mb-2 md:mb-0 hidden md:block relative">
+                            <span class="text-sm font-semibold text-slate-500 block">Feb 2020 - Aug 2021</span>
+                            <div class="absolute w-4 h-4 bg-slate-300 rounded-full -right-[25px] top-1 border-4 border-white shadow z-10"></div>
+                        </div>
+                        <div class="md:col-span-4 bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-all">
+                             <span class="text-xs font-semibold text-slate-500 mb-1 block md:hidden">Feb 2020 - Aug 2021</span>
+                            <h3 class="text-xl font-bold text-slate-800">Executive Administrative Assistant</h3>
+                            <h4 class="text-md font-medium text-slate-600 mb-4">Kareila Management Corporation</h4>
+                            <ul class="list-disc list-outside ml-5 text-slate-600 space-y-2">
+                                <li>Prepared reports and executive correspondence and organized meetings and executive schedules.</li>
+                                <li>Managed schedules, filing systems, procurement, and administrative coordination.</li>
+                                <li>Supported compliance-related documentation and day-to-day executive administration.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience 4 -->
+                <div class="relative pl-8 md:pl-0">
+                    <div class="md:hidden absolute w-4 h-4 bg-slate-300 rounded-full -left-[9px] top-1 border-4 border-white shadow"></div>
+                    <div class="md:grid md:grid-cols-5 md:gap-8 items-start">
+                        <div class="md:col-span-1 md:text-right mb-2 md:mb-0 hidden md:block relative">
+                            <span class="text-sm font-semibold text-slate-500 block">Jan 2018 - Jan 2020</span>
+                            <div class="absolute w-4 h-4 bg-slate-300 rounded-full -right-[25px] top-1 border-4 border-white shadow z-10"></div>
+                        </div>
+                        <div class="md:col-span-4 bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-all">
+                             <span class="text-xs font-semibold text-slate-500 mb-1 block md:hidden">Jan 2018 - Jan 2020</span>
+                            <h3 class="text-xl font-bold text-slate-800">Clinic Supervisor</h3>
+                            <h4 class="text-md font-medium text-slate-600 mb-4">St. Elsewhere Medical and Diagnostic Clinic</h4>
+                            <ul class="list-disc list-outside ml-5 text-slate-600 space-y-2">
+                                <li>Supervised clinic administration and inventory.</li>
+                                <li>Prepared management reports and maintained operational records.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Experience 5 -->
+                <div class="relative pl-8 md:pl-0">
+                    <div class="md:hidden absolute w-4 h-4 bg-slate-300 rounded-full -left-[9px] top-1 border-4 border-white shadow"></div>
+                    <div class="md:grid md:grid-cols-5 md:gap-8 items-start">
+                        <div class="md:col-span-1 md:text-right mb-2 md:mb-0 hidden md:block relative">
+                            <span class="text-sm font-semibold text-slate-500 block">Aug 2015 - Nov 2016</span>
+                            <div class="absolute w-4 h-4 bg-slate-300 rounded-full -right-[25px] top-1 border-4 border-white shadow z-10"></div>
+                        </div>
+                        <div class="md:col-span-4 bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-all">
+                             <span class="text-xs font-semibold text-slate-500 mb-1 block md:hidden">Aug 2015 - Nov 2016</span>
+                            <h3 class="text-xl font-bold text-slate-800">Assistant Retail Manager</h3>
+                            <h4 class="text-md font-medium text-slate-600 mb-4">Excellent People's Multi-Purpose Cooperative (Globe Telecom)</h4>
+                            <ul class="list-disc list-outside ml-5 text-slate-600 space-y-2">
+                                <li>Managed store operations, inventory, staff scheduling, and cash handling.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience 6 -->
+                <div class="relative pl-8 md:pl-0">
+                    <div class="md:hidden absolute w-4 h-4 bg-slate-300 rounded-full -left-[9px] top-1 border-4 border-white shadow"></div>
+                    <div class="md:grid md:grid-cols-5 md:gap-8 items-start">
+                        <div class="md:col-span-1 md:text-right mb-2 md:mb-0 hidden md:block relative">
+                            <span class="text-sm font-semibold text-slate-500 block">Jul 2013 - Aug 2015</span>
+                            <div class="absolute w-4 h-4 bg-slate-300 rounded-full -right-[25px] top-1 border-4 border-white shadow z-10"></div>
+                        </div>
+                        <div class="md:col-span-4 bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-all">
+                             <span class="text-xs font-semibold text-slate-500 mb-1 block md:hidden">Jul 2013 - Aug 2015</span>
+                            <h3 class="text-xl font-bold text-slate-800">Customer Service Representative</h3>
+                            <h4 class="text-md font-medium text-slate-600 mb-4">IBM Business Services</h4>
+                            <ul class="list-disc list-outside ml-5 text-slate-600 space-y-2">
+                                <li>Handled client inquiries, complaints, and service requests professionally while maintaining service records.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience 7 -->
+                <div class="relative pl-8 md:pl-0">
+                    <div class="md:hidden absolute w-4 h-4 bg-slate-300 rounded-full -left-[9px] top-1 border-4 border-white shadow"></div>
+                    <div class="md:grid md:grid-cols-5 md:gap-8 items-start">
+                        <div class="md:col-span-1 md:text-right mb-2 md:mb-0 hidden md:block relative">
+                            <span class="text-sm font-semibold text-slate-500 block">Jan 2009 - Mar 2013</span>
+                            <div class="absolute w-4 h-4 bg-slate-300 rounded-full -right-[25px] top-1 border-4 border-white shadow z-10"></div>
+                        </div>
+                        <div class="md:col-span-4 bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-all">
+                             <span class="text-xs font-semibold text-slate-500 mb-1 block md:hidden">Jan 2009 - Mar 2013</span>
+                            <h3 class="text-xl font-bold text-slate-800">Outbound Sales Associate</h3>
+                            <h4 class="text-md font-medium text-slate-600 mb-4">Top Brass E-Tech Inc.</h4>
+                            <ul class="list-disc list-outside ml-5 text-slate-600 space-y-2">
+                                <li>Generated leads and maintained client databases.</li>
+                                <li>Researched potential clients, identified needs, and developed tailored pitches to communicate value.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Capabilities Section -->
+    <section id="capabilities" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-slate-900 section-heading mb-12 text-center mx-auto block">Selected Work & Capabilities</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm border border-slate-100 hover:-translate-y-1 transition-transform duration-300">
+                    <div class="w-12 h-12 bg-brand-100 rounded-xl flex items-center justify-center text-brand-600 mb-6 text-xl">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-3">Executive Support</h3>
+                    <p class="text-slate-600 leading-relaxed">Calendar and meeting coordination, executive correspondence, scheduling, documentation, and day-to-day administrative support.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm border border-slate-100 hover:-translate-y-1 transition-transform duration-300">
+                    <div class="w-12 h-12 bg-brand-100 rounded-xl flex items-center justify-center text-brand-600 mb-6 text-xl">
+                        <i class="fas fa-user-friends"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-3">HR & People Administration</h3>
+                    <p class="text-slate-600 leading-relaxed">Employee records, HR documentation, recruitment and onboarding support, employee lifecycle administration, and organized personnel files.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm border border-slate-100 hover:-translate-y-1 transition-transform duration-300">
+                    <div class="w-12 h-12 bg-brand-100 rounded-xl flex items-center justify-center text-brand-600 mb-6 text-xl">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-3">Operations</h3>
+                    <p class="text-slate-600 leading-relaxed">Daily operational coordination, inventory monitoring, procurement, purchasing, logistics documentation, and cross-functional follow-up.</p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm border border-slate-100 hover:-translate-y-1 transition-transform duration-300">
+                    <div class="w-12 h-12 bg-brand-100 rounded-xl flex items-center justify-center text-brand-600 mb-6 text-xl">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-3">Reporting & Data</h3>
+                    <p class="text-slate-600 leading-relaxed">Preparation and review of reports, structured spreadsheets, tracking tools, documentation, and accuracy checks.</p>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm border border-slate-100 hover:-translate-y-1 transition-transform duration-300">
+                    <div class="w-12 h-12 bg-brand-100 rounded-xl flex items-center justify-center text-brand-600 mb-6 text-xl">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-3">Client & Customer Support</h3>
+                    <p class="text-slate-600 leading-relaxed">Professional email and phone communication, inquiry handling, service coordination, and support for local and international clients.</p>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm border border-slate-100 hover:-translate-y-1 transition-transform duration-300">
+                    <div class="w-12 h-12 bg-brand-100 rounded-xl flex items-center justify-center text-brand-600 mb-6 text-xl">
+                        <i class="fas fa-magic"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-3">Process Improvement & AI</h3>
+                    <p class="text-slate-600 leading-relaxed">Uses Excel, Google Sheets, templates, formulas, validation tools, and AI-assisted workflows to reduce repetitive work and improve consistency.</p>
+                </div>
+            </div>
+
+            <!-- Tools Section -->
+            <div class="mt-16 bg-white p-8 rounded-2xl border border-slate-200 shadow-sm text-center">
+                <h3 class="text-lg font-bold text-slate-800 mb-6">Tools & Software Proficiency</h3>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <span class="px-4 py-2 bg-slate-100 text-slate-700 rounded-full text-sm font-medium"><i class="fab fa-microsoft text-blue-600 mr-2"></i>MS Word</span>
+                    <span class="px-4 py-2 bg-slate-100 text-slate-700 rounded-full text-sm font-medium"><i class="fas fa-file-excel text-green-600 mr-2"></i>MS Excel</span>
+                    <span class="px-4 py-2 bg-slate-100 text-slate-700 rounded-full text-sm font-medium"><i class="fas fa-file-powerpoint text-orange-600 mr-2"></i>MS PowerPoint</span>
+                    <span class="px-4 py-2 bg-slate-100 text-slate-700 rounded-full text-sm font-medium"><i class="fab fa-google text-blue-500 mr-2"></i>Google Docs</span>
+                    <span class="px-4 py-2 bg-slate-100 text-slate-700 rounded-full text-sm font-medium"><i class="fas fa-file-csv text-green-500 mr-2"></i>Google Sheets</span>
+                    <span class="px-4 py-2 bg-slate-100 text-slate-700 rounded-full text-sm font-medium"><i class="fab fa-google-drive text-blue-500 mr-2"></i>Google Drive</span>
+                    <span class="px-4 py-2 bg-slate-100 text-slate-700 rounded-full text-sm font-medium"><i class="fas fa-envelope text-red-500 mr-2"></i>Gmail</span>
+                    <span class="px-4 py-2 bg-slate-100 text-slate-700 rounded-full text-sm font-medium"><i class="far fa-calendar-alt text-blue-400 mr-2"></i>Google Calendar</span>
+                    <span class="px-4 py-2 bg-slate-100 text-slate-700 rounded-full text-sm font-medium"><i class="fas fa-database text-slate-500 mr-2"></i>CRM Systems</span>
+                    <span class="px-4 py-2 bg-slate-100 text-slate-700 rounded-full text-sm font-medium"><i class="fas fa-robot text-purple-500 mr-2"></i>AI Productivity Tools</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Training Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-slate-900 section-heading mb-12 text-center mx-auto block">Education & Training</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <div class="bg-slate-50 p-6 rounded-xl border border-slate-100">
+                    <span class="text-brand-600 font-bold text-sm">2024</span>
+                    <h3 class="text-lg font-bold text-slate-800 mt-1">Bachelor of Science in Business Administration</h3>
+                    <p class="text-slate-600 font-medium mb-2">Major in Marketing Management</p>
+                    <p class="text-slate-500 text-sm"><i class="fas fa-university mr-2"></i>Lyceum of the Philippines University</p>
+                </div>
+                <div class="bg-slate-50 p-6 rounded-xl border border-slate-100">
+                    <span class="text-brand-600 font-bold text-sm">2008</span>
+                    <h3 class="text-lg font-bold text-slate-800 mt-1">Bachelor of Science in Occupational Therapy</h3>
+                    <p class="text-slate-600 font-medium mb-2">&nbsp;</p> <!-- Spacer -->
+                    <p class="text-slate-500 text-sm"><i class="fas fa-university mr-2"></i>University of Perpetual Help - Dr. Jose G. Tamayo Medical University</p>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-xl font-bold text-slate-800 mb-6">Additional Training & Certifications</h3>
+                <ul class="space-y-3">
+                    <li class="flex items-start">
+                        <i class="fas fa-certificate text-brand-500 mt-1 mr-3"></i>
+                        <span class="text-slate-700">Basic Occupational Safety and Health</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-certificate text-brand-500 mt-1 mr-3"></i>
+                        <span class="text-slate-700">Emergency First Aid & Basic Life Support</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-certificate text-brand-500 mt-1 mr-3"></i>
+                        <span class="text-slate-700">Masterclass Training for Social Media Marketing and Management</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-certificate text-brand-500 mt-1 mr-3"></i>
+                        <span class="text-slate-700">Philippine Taxation for Individual and Business</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-certificate text-brand-500 mt-1 mr-3"></i>
+                        <span class="text-slate-700">Revised IRR DO. 252, s. 2025 Orientation</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Career Value & Contact Footer -->
+    <section id="contact" class="bg-slate-900 text-white py-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-white mb-6">The Value I Bring</h2>
+            <div class="bg-slate-800 p-8 rounded-2xl mb-12 border border-slate-700">
+                <p class="text-lg text-slate-300 leading-relaxed italic">
+                    "I bring a combination of executive support, operations experience, administrative discipline, and practical business knowledge. My goal is to become a dependable extension of the executive or operations team—someone who can be trusted to organize information, manage priorities, communicate clearly, and follow through."
+                </p>
+            </div>
+            
+            <h3 class="text-2xl font-bold mb-8">Let's Connect</h3>
+            
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-6 mb-12">
+                <a href="mailto:ninoacunin@gmail.com" class="flex items-center px-6 py-3 bg-brand-600 hover:bg-brand-500 text-white rounded-lg transition-colors font-medium">
+                    <i class="fas fa-envelope mr-3"></i> ninoacunin@gmail.com
+                </a>
+                <div class="flex items-center px-6 py-3 bg-slate-800 text-slate-300 rounded-lg border border-slate-700">
+                    <i class="fas fa-map-marker-alt mr-3 text-brand-400"></i> Santa Rosa, Laguna, PH
+                </div>
+            </div>
+        </div>
+        
+        <div class="border-t border-slate-800 mt-12 pt-8 text-center">
+            <p class="text-slate-500 text-sm">
+                &copy; <span id="currentYear"></span> Niño R. Acunin. Executive & Operations Portfolio.
+            </p>
+        </div>
+    </section>
+
+    <!-- Resume Modal -->
+    <div id="resume-modal" class="fixed inset-0 z-[100] hidden">
+        <!-- Backdrop -->
+        <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm backdrop" onclick="toggleResumeModal()"></div>
+        
+        <!-- Modal Content Container -->
+        <div class="absolute inset-0 z-10 flex items-center justify-center p-4 sm:p-6 modal-container">
+            <div class="bg-white w-full max-w-4xl h-[90vh] rounded-2xl shadow-2xl flex flex-col overflow-hidden border border-slate-200">
+                
+                <!-- Modal Header with Actions -->
+                <div class="flex justify-between items-center p-4 sm:p-5 border-b border-slate-200 bg-slate-50 modal-header shrink-0">
+                    <h3 class="text-lg font-bold text-slate-800 flex items-center gap-2">
+                        <i class="fas fa-file-alt text-sky-500"></i> NIÑO ACUNIN RESUME_2.pdf
+                    </h3>
+                    <div class="flex gap-3">
+                        <button onclick="window.print()" class="px-4 py-2 text-sm font-semibold text-slate-700 bg-white border border-slate-300 rounded-lg hover:bg-slate-50 hover:text-sky-600 transition-colors shadow-sm flex items-center gap-2">
+                            <i class="fas fa-print"></i> Print Resume
+                        </button>
+                        <button onclick="toggleResumeModal()" class="w-9 h-9 flex items-center justify-center text-slate-500 hover:text-slate-800 hover:bg-slate-200 rounded-full transition-colors">
+                            <i class="fas fa-times text-lg"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Resume Document (Scrollable Body) -->
+                <div id="printable-resume" class="overflow-y-auto p-8 sm:p-12 lg:p-16 text-slate-800 bg-white grow">
+                    
+                    <!-- Resume Header -->
+                    <div class="text-center mb-8 border-b-2 border-slate-800 pb-6">
+                        <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight uppercase mb-2">Niño R. Acunin</h1>
+                        <p class="text-sm sm:text-base text-slate-600 font-medium">Santa Rosa, Laguna, Philippines | ninoacunin@gmail.com</p>
+                    </div>
+                    
+                    <!-- Profile -->
+                    <div class="mb-8">
+                        <h2 class="text-lg font-bold text-slate-900 uppercase tracking-wider mb-3 bg-slate-100 py-1 px-3 border-l-4 border-sky-500">Professional Profile</h2>
+                        <p class="text-sm leading-relaxed text-slate-700 text-justify">Highly organized and results-driven Administrative and Operations Professional with more than 10 years of experience supporting executives, managing administrative workflows, coordinating operations, maintaining records, preparing reports, and working with clients and internal teams. Experienced in fast-paced environments where accuracy, discretion, follow-through, and clear communication are essential.</p>
+                    </div>
+                    
+                    <!-- Skills & Expertise -->
+                    <div class="mb-8">
+                        <h2 class="text-lg font-bold text-slate-900 uppercase tracking-wider mb-3 bg-slate-100 py-1 px-3 border-l-4 border-sky-500">Skills & Expertise</h2>
+                        <ul class="list-disc ml-5 text-sm leading-relaxed text-slate-700 space-y-2">
+                            <li><strong>Executive & Administrative Support:</strong> Calendar and meeting coordination, executive correspondence, scheduling, remote and virtual support.</li>
+                            <li><strong>Operations & Process Improvement:</strong> Daily operational coordination, inventory monitoring, procurement, purchasing, logistics documentation, AI-assisted workflows to reduce manual effort.</li>
+                            <li><strong>HR Administration:</strong> Employee records, HR documentation, recruitment and onboarding support, employee lifecycle administration, organized personnel files.</li>
+                            <li><strong>Reporting & Data:</strong> Preparation and review of reports, structured spreadsheets, tracking tools, documentation, and accuracy checks.</li>
+                            <li><strong>Client & Customer Support:</strong> Professional email and phone communication, inquiry handling, service coordination for local and international clients.</li>
+                            <li><strong>Professional Traits:</strong> Extreme ownership of tasks, high attention to detail, operational mindset, high adaptability across various business functions.</li>
+                            <li><strong>Tools & Technologies:</strong> Microsoft Office (Word, Excel, PowerPoint), Google Workspace (Docs, Sheets, Drive, Gmail, Calendar), CRM systems, AI productivity tools.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Career Experience -->
+                    <div class="mb-8">
+                        <h2 class="text-lg font-bold text-slate-900 uppercase tracking-wider mb-5 bg-slate-100 py-1 px-3 border-l-4 border-sky-500">Career Experience</h2>
+                        
+                        <div class="space-y-6">
+                            <!-- Role 1 -->
+                            <div>
+                                <div class="flex justify-between items-start flex-col sm:flex-row mb-1">
+                                    <h3 class="text-base font-bold text-slate-900">Takumi Safety Philippines Inc. | <span class="font-medium text-sky-700">HR & Administrative Operations Manager</span></h3>
+                                    <span class="text-sm font-bold text-slate-600 sm:text-right shrink-0">Dec 2023 - Present</span>
+                                </div>
+                                <ul class="list-disc ml-5 text-sm leading-relaxed text-slate-700 space-y-1">
+                                    <li>Manage daily administrative and operational activities and support business requirements across functions.</li>
+                                    <li>Prepare reports, memoranda, correspondence, and company documentation with attention to accuracy and confidentiality.</li>
+                                    <li>Maintain employee records and HR files while monitoring office and operational inventory.</li>
+                                    <li>Coordinate procurement and purchasing and support accounting and logistics documentation.</li>
+                                    <li>Organize meetings and executive schedules and help ensure compliance with company and government requirements.</li>
+                                </ul>
+                            </div>
+                            
+                            <!-- Role 2 -->
+                            <div>
+                                <div class="flex justify-between items-start flex-col sm:flex-row mb-1">
+                                    <h3 class="text-base font-bold text-slate-900">Bluebaby Logistics LLC | <span class="font-medium text-sky-700">General Virtual Administrative Assistant</span></h3>
+                                    <span class="text-sm font-bold text-slate-600 sm:text-right shrink-0">Jan 2021 - Dec 2023</span>
+                                </div>
+                                <ul class="list-disc ml-5 text-sm leading-relaxed text-slate-700 space-y-1">
+                                    <li>Provided remote administrative support through email and phone.</li>
+                                    <li>Prepared reports and maintained organized digital records.</li>
+                                    <li>Managed calendars and coordinated client communications across time zones.</li>
+                                </ul>
+                            </div>
+
+                            <!-- Role 3 -->
+                            <div>
+                                <div class="flex justify-between items-start flex-col sm:flex-row mb-1">
+                                    <h3 class="text-base font-bold text-slate-900">Kareila Management Corporation | <span class="font-medium text-sky-700">Executive Administrative Assistant</span></h3>
+                                    <span class="text-sm font-bold text-slate-600 sm:text-right shrink-0">Feb 2020 - Aug 2021</span>
+                                </div>
+                                <ul class="list-disc ml-5 text-sm leading-relaxed text-slate-700 space-y-1">
+                                    <li>Prepared reports and executive correspondence and organized meetings and executive schedules.</li>
+                                    <li>Managed schedules, filing systems, procurement, and administrative coordination.</li>
+                                    <li>Supported compliance-related documentation and day-to-day executive administration.</li>
+                                </ul>
+                            </div>
+
+                            <!-- Role 4 -->
+                            <div>
+                                <div class="flex justify-between items-start flex-col sm:flex-row mb-1">
+                                    <h3 class="text-base font-bold text-slate-900">St. Elsewhere Medical and Diagnostic Clinic | <span class="font-medium text-sky-700">Clinic Supervisor</span></h3>
+                                    <span class="text-sm font-bold text-slate-600 sm:text-right shrink-0">Jan 2018 - Jan 2020</span>
+                                </div>
+                                <ul class="list-disc ml-5 text-sm leading-relaxed text-slate-700 space-y-1">
+                                    <li>Supervised clinic administration and inventory.</li>
+                                    <li>Prepared management reports and maintained operational records.</li>
+                                </ul>
+                            </div>
+
+                            <!-- Role 5 -->
+                            <div>
+                                <div class="flex justify-between items-start flex-col sm:flex-row mb-1">
+                                    <h3 class="text-base font-bold text-slate-900">Excellent People's Multi-Purpose Cooperative | <span class="font-medium text-sky-700">Assistant Retail Manager</span></h3>
+                                    <span class="text-sm font-bold text-slate-600 sm:text-right shrink-0">Aug 2015 - Nov 2016</span>
+                                </div>
+                                <ul class="list-disc ml-5 text-sm leading-relaxed text-slate-700 space-y-1">
+                                    <li>Managed store operations, inventory, staff scheduling, and cash handling.</li>
+                                </ul>
+                            </div>
+
+                            <!-- Role 6 -->
+                            <div>
+                                <div class="flex justify-between items-start flex-col sm:flex-row mb-1">
+                                    <h3 class="text-base font-bold text-slate-900">IBM Business Services | <span class="font-medium text-sky-700">Customer Service Representative</span></h3>
+                                    <span class="text-sm font-bold text-slate-600 sm:text-right shrink-0">Jul 2013 - Aug 2015</span>
+                                </div>
+                                <ul class="list-disc ml-5 text-sm leading-relaxed text-slate-700 space-y-1">
+                                    <li>Handled client inquiries, complaints, and service requests professionally while maintaining service records.</li>
+                                </ul>
+                            </div>
+
+                            <!-- Role 7 -->
+                            <div>
+                                <div class="flex justify-between items-start flex-col sm:flex-row mb-1">
+                                    <h3 class="text-base font-bold text-slate-900">Top Brass E-Tech Inc. | <span class="font-medium text-sky-700">Outbound Sales Associate</span></h3>
+                                    <span class="text-sm font-bold text-slate-600 sm:text-right shrink-0">Jan 2009 - Mar 2013</span>
+                                </div>
+                                <ul class="list-disc ml-5 text-sm leading-relaxed text-slate-700 space-y-1">
+                                    <li>Generated leads and maintained client databases.</li>
+                                    <li>Researched potential clients, identified needs, and developed tailored pitches to communicate value.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Education -->
+                    <div>
+                        <h2 class="text-lg font-bold text-slate-900 uppercase tracking-wider mb-4 bg-slate-100 py-1 px-3 border-l-4 border-sky-500">Education & Training</h2>
+                        <ul class="list-disc ml-5 text-sm leading-relaxed text-slate-700 space-y-3">
+                            <li><strong>Bachelor of Science in Business Administration, Marketing Management</strong> <br> <span class="text-slate-500">Lyceum of the Philippines University, 2024</span></li>
+                            <li><strong>Bachelor of Science in Occupational Therapy</strong> <br> <span class="text-slate-500">University of Perpetual Help, 2008</span></li>
+                            <li><strong>Additional training:</strong> Basic Occupational Safety and Health, Emergency First Aid & Basic Life Support, Masterclass Training for Social Media Marketing and Management, Philippine Taxation for Individual and Business, Revised IRR DO. 252, s. 2025 Orientation.</li>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- AI Chat Assistant UI -->
+    <div id="ai-chat-widget" class="fixed bottom-6 right-6 z-50 flex flex-col items-end">
+        <!-- Chat Window -->
+        <div id="ai-chat-window" class="hidden w-80 sm:w-96 bg-white rounded-2xl shadow-2xl border border-slate-200 mb-4 flex flex-col overflow-hidden transition-all duration-300 origin-bottom-right">
+            <!-- Header -->
+            <div class="bg-brand-600 p-4 text-white flex justify-between items-center shadow-md z-10">
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-robot text-xl"></i>
+                    <div>
+                        <h3 class="font-bold text-sm leading-tight">Niño's AI Assistant</h3>
+                        <p class="text-[10px] text-brand-100 font-medium">Powered by Gemini</p>
+                    </div>
+                </div>
+                <button id="close-chat-btn" class="text-white hover:text-slate-200 focus:outline-none transition-colors">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <!-- Messages Area -->
+            <div id="chat-messages" class="p-4 h-80 overflow-y-auto bg-slate-50 flex flex-col gap-3 scroll-smooth">
+                <div class="flex items-start gap-2">
+                    <div class="w-8 h-8 rounded-full bg-brand-100 text-brand-600 flex items-center justify-center flex-shrink-0 shadow-sm">
+                        <i class="fas fa-robot text-sm"></i>
+                    </div>
+                    <div class="bg-white p-3 rounded-xl rounded-tl-none shadow-sm text-sm text-slate-700 border border-slate-100 leading-relaxed">
+                        Hi! I'm an AI assistant trained on Niño's professional portfolio. What would you like to know about his experience, skills, or background?
+                    </div>
+                </div>
+            </div>
+
+            <!-- Input Area -->
+            <div class="p-3 bg-white border-t border-slate-100 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.05)]">
+                <form id="chat-form" class="flex gap-2 relative">
+                    <input type="text" id="chat-input" placeholder="Ask a question..." class="w-full pl-4 pr-10 py-2.5 bg-slate-50 border border-slate-200 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-all placeholder:text-slate-400" required autocomplete="off">
+                    <button type="submit" id="send-btn" class="absolute right-1.5 top-1.5 w-8 h-8 flex items-center justify-center text-white bg-brand-600 hover:bg-brand-700 disabled:bg-slate-300 rounded-full transition-colors shadow-sm">
+                        <i class="fas fa-paper-plane text-xs"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Floating Toggle Button -->
+        <button id="chat-toggle-btn" class="w-14 h-14 bg-brand-600 text-white rounded-full shadow-lg hover:bg-brand-700 hover:shadow-xl transition-all duration-300 flex items-center justify-center focus:outline-none group relative">
+            <i class="fas fa-comment-dots text-2xl group-hover:scale-110 transition-transform"></i>
+            <span class="absolute -top-1 -right-1 flex h-4 w-4">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-4 w-4 bg-brand-500 border-2 border-white"></span>
+            </span>
+        </button>
+    </div>
+
+    <script>
+        function toggleResumeModal() {
+            const modal = document.getElementById('resume-modal');
+            modal.classList.toggle('hidden');
+            if (!modal.classList.contains('hidden')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        menu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                navbar.classList.add('shadow-sm', 'bg-white/95');
+                navbar.classList.remove('bg-white/90');
+            } else {
+                navbar.classList.remove('shadow-sm', 'bg-white/95');
+                navbar.classList.add('bg-white/90');
+            }
+        });
+
+        const chatWidget = document.getElementById('ai-chat-widget');
+        const chatWindow = document.getElementById('ai-chat-window');
+        const chatToggleBtn = document.getElementById('chat-toggle-btn');
+        const closeChatBtn = document.getElementById('close-chat-btn');
+        const chatForm = document.getElementById('chat-form');
+        const chatInput = document.getElementById('chat-input');
+        const chatMessages = document.getElementById('chat-messages');
+        const sendBtn = document.getElementById('send-btn');
+
+        let chatHistory = [];
+
+        const toggleChat = () => {
+            chatWindow.classList.toggle('hidden');
+            if (!chatWindow.classList.contains('hidden')) {
+                chatInput.focus();
+                const ping = chatToggleBtn.querySelector('.animate-ping');
+                if(ping) ping.parentElement.remove();
+            }
+        };
+
+        chatToggleBtn.addEventListener('click', toggleChat);
+        closeChatBtn.addEventListener('click', toggleChat);
+
+        const appendMessage = (text, isUser = false) => {
+            const msgDiv = document.createElement('div');
+            msgDiv.className = `flex items-start gap-2 ${isUser ? 'flex-row-reverse' : ''}`;
+            
+            const avatar = document.createElement('div');
+            avatar.className = `w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 shadow-sm ${isUser ? 'bg-slate-800 text-white' : 'bg-brand-100 text-brand-600'}`;
+            avatar.innerHTML = `<i class="fas ${isUser ? 'fa-user' : 'fa-robot'} text-sm"></i>`;
+            
+            const bubble = document.createElement('div');
+            bubble.className = `p-3 rounded-xl shadow-sm text-sm text-slate-700 border leading-relaxed ${isUser ? 'bg-slate-100 rounded-tr-none border-slate-200' : 'bg-white rounded-tl-none border-slate-100'}`;
+            
+            const formattedText = text
+                .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                .replace(/\*(.*?)\*/g, '<em>$1</em>')
+                .replace(/\n/g, '<br>');
+                
+            bubble.innerHTML = formattedText;
+            
+            msgDiv.appendChild(avatar);
+            msgDiv.appendChild(bubble);
+            chatMessages.appendChild(msgDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        };
+
+        const showTypingIndicator = () => {
+            const typingDiv = document.createElement('div');
+            typingDiv.id = 'typing-indicator';
+            typingDiv.className = 'flex items-start gap-2';
+            typingDiv.innerHTML = `
+                <div class="w-8 h-8 rounded-full bg-brand-100 text-brand-600 flex items-center justify-center flex-shrink-0 shadow-sm">
+                    <i class="fas fa-robot text-sm"></i>
+                </div>
+                <div class="bg-white p-4 rounded-xl rounded-tl-none shadow-sm border border-slate-100 flex gap-1 items-center h-[46px]">
+                    <div class="w-2 h-2 bg-slate-300 rounded-full animate-bounce" style="animation-delay: 0ms"></div>
+                    <div class="w-2 h-2 bg-slate-300 rounded-full animate-bounce" style="animation-delay: 150ms"></div>
+                    <div class="w-2 h-2 bg-slate-300 rounded-full animate-bounce" style="animation-delay: 300ms"></div>
+                </div>
+            `;
+            chatMessages.appendChild(typingDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        };
+
+        const removeTypingIndicator = () => {
+            const indicator = document.getElementById('typing-indicator');
+            if (indicator) indicator.remove();
+        };
+
+        const systemPrompt = `You are an AI Assistant embedded in Niño R. Acunin's professional portfolio website. 
+Your goal is to help recruiters, hiring managers, and visitors learn about Niño's background.
+Always base your answers ONLY on the provided information. 
+Be concise, professional, friendly, and persuasive about his capabilities. 
+Do not hallucinate or invent information. If asked something outside this scope, politely decline and suggest emailing him.
+
+Niño's Profile Information:
+- Role: Executive & Operations Professional with 10+ years of experience.
+- Location: Santa Rosa, Laguna, Philippines.
+- Email: ninoacunin@gmail.com
+- Core Value: Takes ownership, detail-oriented, operational mindset, adaptable, professional communicator.
+- Key Strengths: Executive & Admin Support, Operations Coordination, HR Administration, Calendar & Meeting Coordination, Reports & Documentation, Procurement & Purchasing, Digital Records, Inventory Monitoring, Client Communication.
+- Tools: MS Office (Word, Excel, PowerPoint), Google Workspace, CRM systems, AI productivity tools.
+
+Experience Timeline:
+1. HR & Administrative Operations Manager @ Takumi Safety Philippines Inc. (Dec 2023 - Present) - Manages daily admin/ops, prepares HR/company documentation, maintains employee records, coordinates procurement, organizes executive schedules.
+2. General Virtual Administrative Assistant @ Bluebaby Logistics LLC (Jan 2021 - Dec 2023) - Remote admin support, managed calendars, coordinated client communications across time zones.
+3. Executive Administrative Assistant @ Kareila Management Corporation (Feb 2020 - Aug 2021) - Prepared executive correspondence, managed schedules, filing systems, and procurement.
+4. Clinic Supervisor @ St. Elsewhere Medical and Diagnostic Clinic (Jan 2018 - Jan 2020) - Supervised clinic admin and inventory, prepared management reports.
+5. Assistant Retail Manager @ Excellent People's Multi-Purpose Cooperative (Globe Telecom) (Aug 2015 - Nov 2016)
+6. Customer Service Rep @ IBM Business Services (Jul 2013 - Aug 2015)
+7. Outbound Sales Associate @ Top Brass E-Tech Inc. (Jan 2009 - Mar 2013)
+
+Education:
+- BS Business Administration (Marketing Mgmt), Lyceum of the Philippines University, 2024.
+- BS Occupational Therapy, University of Perpetual Help, 2008.`;
+
+        chatForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const message = chatInput.value.trim();
+            if (!message) return;
+
+            appendMessage(message, true);
+            chatInput.value = '';
+            chatInput.disabled = true;
+            sendBtn.disabled = true;
+            showTypingIndicator();
+
+            chatHistory.push({ role: "user", parts: [{ text: message }] });
+
+            const payload = {
+                systemInstruction: { parts: [{ text: systemPrompt }] },
+                contents: chatHistory,
+            };
+
+            const apiKey = ""; 
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=${apiKey}`;
+
+            const fetchWithRetry = async (url, options, retries = 3, delay = 1000) => {
+                try {
+                    const res = await fetch(url, options);
+                    if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
+                    return await res.json();
+                } catch (error) {
+                    if (retries > 0) {
+                        await new Promise(resolve => setTimeout(resolve, delay));
+                        return fetchWithRetry(url, options, retries - 1, delay * 2);
+                    } else {
+                        throw error;
+                    }
+                }
+            };
+
+            try {
+                const result = await fetchWithRetry(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                removeTypingIndicator();
+
+                const candidate = result.candidates?.[0];
+                if (candidate && candidate.content?.parts?.[0]?.text) {
+                    const aiResponse = candidate.content.parts[0].text;
+                    appendMessage(aiResponse, false);
+                    chatHistory.push({ role: "model", parts: [{ text: aiResponse }] });
+                } else {
+                    appendMessage("I'm sorry, I couldn't generate a response right now. Please try asking differently.", false);
+                }
+            } catch (error) {
+                removeTypingIndicator();
+                appendMessage("I'm having a little trouble connecting to my servers right now. Please feel free to email Niño directly at **ninoacunin@gmail.com**.", false);
+            } finally {
+                chatInput.disabled = false;
+                sendBtn.disabled = false;
+                chatInput.focus();
+            }
+        });
+    </script>
+</body>
+</html>
